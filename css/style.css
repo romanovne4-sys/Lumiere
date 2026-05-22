@@ -497,11 +497,11 @@
             cursor: pointer;
         }
         /* shop__now hover */
-        /*
+        
         .shop__now-btn:hover {
             background-color: transparent;
             color: #fff;
-        } */
+        }
         /* RUN LINE */
         
         .line {
@@ -966,7 +966,6 @@
         
         .footer__subscribe {
             width: clamp(375px, 32vw, 755px);
-            /* width: 100px; */
             display: flex;
             flex-direction: column;
             /* align-items: flex-start; */

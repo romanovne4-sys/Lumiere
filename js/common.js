@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     animate();
 
-    const interactive = document.querySelectorAll('a, button, li, input');
+    const interactive = document.querySelectorAll('a, button, li, input, .product-card__info');
     interactive.forEach(el => {
         el.addEventListener('mouseenter', () => {
             cursor.classList.add('active');
