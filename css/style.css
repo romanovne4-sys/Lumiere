@@ -57,9 +57,8 @@
         
         .container {
             width: 100%;
-            max-width: 1820px;
             margin: 0 auto;
-            padding: 0 clamp(25px, 2.9vw, 53px);
+            padding: 2.12765957447vw;
         }
         /* menu */
         
