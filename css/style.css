@@ -149,7 +149,7 @@
         /* header__hero */
         
         .header__hero {
-            min-height: clamp(700px, 56vw, 1015px);
+            min-height: 100vh;
             position: relative;
             overflow: hidden;
             margin-bottom: 200px;
@@ -158,6 +158,7 @@
         /* КАРТИНКА */
         
         .hero__image-wrap {
+            min-height: 100vh;
             pointer-events: none;
             position: absolute;
             top: 0;
