@@ -409,54 +409,51 @@
             /* line-height: 2; */
             color: #000;
         }
-        /* СЕКЦИЯ 3 BRANDS */
-        
-        .brands {
-            margin-bottom: clamp(180px, 19vw, 360px);
-        }
+        /* BRADNS */
         
         .brand-item {
             position: relative;
-            border-bottom: clamp(1px, 0.2vw, 3px) solid #000;
             height: clamp(150px, 21vw, 390px);
             overflow: hidden;
-            cursor: pointer;
             display: flex;
-            align-items: center;
+            align-items: flex-end;
+            cursor: pointer;
         }
+        /* ТЕКСТ */
         
         .brand-text {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            font-size: clamp(150px, 18vw, 350px);
+            display: inline-block;
+            font-size: clamp(150px, 17vw, 350px);
             font-weight: 400;
-            color: #222;
-            text-transform: uppercase;
-            user-select: none;
-            pointer-events: none;
             line-height: 1;
+            text-transform: uppercase;
             white-space: nowrap;
+            color: #111;
+            clip-path: inset(0 0 50% 0);
+            transition: clip-path 0.7s cubic-bezier(0.83, 0, 0.17, 1);
         }
-        /* Overlay — закрывает нижнюю половину текста фоном страницы */
+        /* ЛИНИЯ */
         
-        .brand-cover {
+        .brand-item::after {
+            content: "";
             position: absolute;
-            bottom: 0;
             left: 0;
+            right: 0;
+            /* ниже текста на 20px */
+            bottom: 80px;
+            height: 1px;
             width: 100%;
-            /* закрывает ровно половину высоты контейнера */
-            height: 50%;
-            background-color: #EDEBEF;
-            /* = фон body */
-            z-index: 2;
-            transition: height 0.65s cubic-bezier(0.83, 0, 0.17, 1);
-            pointer-events: none;
+            background: #000;
+            transition: bottom 0.7s cubic-bezier(0.83, 0, 0.17, 1);
         }
-        /* При ховере overlay схлопывается — нижняя половина текста открывается */
+        /* HOVER */
         
-        .brand-item:hover .brand-cover {
-            height: 0;
+        .brand-item:hover .brand-text {
+            clip-path: inset(0 0 0 0);
+        }
+        
+        .brand-item:hover::after {
+            bottom: 0;
         }
         /* <!-- СЕКЦИЯ 4 Illuminating --> */
         
@@ -467,6 +464,7 @@
             background-position: center;
             background-repeat: no-repeat;
             margin-bottom: clamp(115px, 10vw, 230px);
+            margin-top: clamp(50px, 5vw, 100px);
         }
         
         .Illuminating__inner {
