@@ -157,15 +157,15 @@
         /* КАРТИНКА */
         
         .hero__image-wrap {
-            min-height: 100vh;
+            height: 100vh;
             pointer-events: none;
             position: absolute;
-            top: 0;
+            bottom: 0px;
             left: 50%;
             transform: translateX(-50%);
-            max-width: 2030px;
             width: 100%;
             z-index: 2;
+            background-size: cover;
         }
         
         .hero__img {
